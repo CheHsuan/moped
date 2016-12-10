@@ -14,11 +14,11 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
 
-    <title ng-bind-template="{{pageTitle}} | Moped <%= version %>"></title>
+    <title ng-bind-template="{{pageTitle}} | Moped 0.7.0"></title>
 
-    <% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" />
-    <% }); %>
+    
+    <link rel="stylesheet" type="text/css" href="assets/css/moped-0.7.0.css" />
+    
 
   </head>
 
@@ -53,15 +53,13 @@
             <a href="#/">Home</a>
           </div>
         </header>
-
-        <section id="maincontent" class="maincontent pane-row scroll-y">
+        <section style="top: 32px;" class="nowplaying pane-row">
+          <div ng-include="'nowplaying/nowplaying.tpl.html'"></div>
+        </section> 
+        <section id="maincontent" style="top: 100px; bottom: 50px;" class="maincontent pane-row scroll-y">
           <div class="container" ng-view>
 
           </div>
-        </section>
-
-        <section class="nowplaying pane-row">
-          <div ng-include="'nowplaying/nowplaying.tpl.html'"></div>
         </section>
 
         <section class="controls pane-row">
@@ -70,8 +68,8 @@
       </div>
     </div>
 
-    <% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script>
-    <% }); %>
+    
+    <script type="text/javascript" src="assets/moped-0.7.0.js"></script>
+    
   </body>
 </html>
