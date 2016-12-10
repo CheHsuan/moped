@@ -10,6 +10,16 @@
   <playlist playlist="playlist" ng-repeat="playlist in playlists" />
 </div>
 
-<div ng-if="tracks.length != 0" class="list-group">
+<div ng-if="tracks.length != 0" class="list-group" style:"font-size:xx-small;">
+  <div>
+    <div class="col-xs-1">Number</div>
+    <h4 class="col-xs-10 col-sm-5 list-group-item-heading">Track Name</h4>
+    <div class="clearfix visible-xs"></div>
+    <div class="col-xs-1 visible-xs"></div>
+    <h4 class="col-xs-9 col-sm-5 list-group-item-heading">Artist</h4>
+    <div class="col-xs-1">Length</div>
+    <div class="clearfix hidden-xs"></div>
+    <div class="col-sm-1 hidden-xs"></div>
+  </div>
   <moped-track track-no="$index+1" track="track" ng-repeat="track in tracks track by $index" />
 </div>
