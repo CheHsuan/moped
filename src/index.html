@@ -49,20 +49,21 @@
             </div>
             <div class="pull-right working" ng-show="working">
             </div>
-            <a href="" ng-click="goBack()" ng-show="isBackVisible">< Back</a>
+            <a href="" ng-click="goBack()" ng-show="isBackVisible">Back</a>
             <a href="#/">Home</a>
-          </div>
+          </div> 
         </header>
-        <section style="top: 32px;" class="nowplaying pane-row">
+
+        <section style="top:32px;height:120px;background-image:url(assets/images/wallpaper.jpg);" class="nowplaying pane-row">
           <div ng-include="'nowplaying/nowplaying.tpl.html'"></div>
         </section> 
-        <section id="maincontent" style="top: 100px; bottom: 50px;" class="maincontent pane-row scroll-y">
-          <div class="container" ng-view>
 
+        <section id="maincontent" style="top: 152px; bottom: 50px;" class="maincontent pane-row scroll-y">
+          <div class="container" ng-view>
           </div>
         </section>
-
-        <section class="controls pane-row">
+        
+        <section style="background-color:#326988;" class="controls pane-row">
           <div ng-include="'playercontrols/playercontrols.tpl.html'"></div>
         </section>
       </div>
