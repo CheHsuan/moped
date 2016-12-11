@@ -1,4 +1,10 @@
-<ul class="list-inline" ng-controller="PlayerControlsCtrl">
+<STYLE TYPE="text/css">
+    .list-inline > li {
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+</STYLE>
+<ul style="text-align: center;" class="list-inline" ng-controller="PlayerControlsCtrl">
   <li><a href="" class="glyphicon glyphicon-fast-backward" role="button" ng-click="previous()"></a></li>
   <li><a href="" class="glyphicon" ng-class="{ 'glyphicon-play': ! isPlaying, 'glyphicon-pause': isPlaying }" ng-click="play()" role="button"></a></li>
   <li><a href="" class="glyphicon glyphicon-stop" role="button" ng-click="stop()"></a></li>
