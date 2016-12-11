@@ -2,9 +2,9 @@
   <div class="col-xs-12 col-sm-6 track">
     <img style="float:left;height: 80px;width: 80px;margin:20px 20px;" ng-src="{{currentTrackImageUrl}}" />
     <div style="margin:20px auto;">
-      <a class="albumlink" href="" ng-href="#/album/{{currentAlbumUri}}">{{currentTrack}}</a>
+      <a style="font-size:20px;" class="albumlink" href="" ng-href="#/album/{{currentAlbumUri}}">{{currentTrack}}</a>
       <div ng-repeat="artist in currentArtists track by artist.uri">
-        <a class="artistlink" href="" ng-href="#/artist/{{artist.uri}}/{{artist.name|doubleUrlEncode}}">{{artist.name}}</a>
+        <a style="font-size:14px;" class="artistlink" href="" ng-href="#/artist/{{artist.uri}}/{{artist.name|doubleUrlEncode}}">{{artist.name}}</a>
       </div>
     </div>    
   </div>
